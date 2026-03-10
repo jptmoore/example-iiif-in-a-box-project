@@ -36,10 +36,11 @@ example-iiif-project/
 
 ## How to Use
 
-### 1. Navigate to the IIIF-in-a-Box directory
+### 1. Clone the IIIF-in-a-Box repository
 
 ```bash
-cd /home/john/git/iiif-in-a-box
+git clone https://github.com/your-org/iiif-in-a-box.git
+cd iiif-in-a-box
 ```
 
 ### 2. Build and start the IIIF services
