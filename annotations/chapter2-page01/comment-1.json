@@ -1,6 +1,6 @@
 {
   "@context": "http://www.w3.org/ns/anno.jsonld",
-  "id": "http://localhost:8080/miiify/annotation/chapter2-page01-comment-1",
+  "id": "http://localhost:8080/miiify/annotations/chapter2-page01/comment-1",
   "type": "Annotation",
   "motivation": "commenting",
   "created": "2024-03-10T11:15:00Z",
