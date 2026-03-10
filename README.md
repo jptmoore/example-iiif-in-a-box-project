@@ -34,32 +34,99 @@ example-iiif-project/
         └── highlight-1.json           # Highlighted passage of interest
 ```
 
-## Naming Convention
+## Annotation Naming Convention
 
-**IMPORTANT:** File and folder names use a hierarchical naming convention with dashes (`-`) to define the IIIF collection and manifest structure.
+**CRITICAL RULE:** Annotation folder names must exactly match image base names (without extension).
 
-### How it works:
-- **Dashes (`-`) represent hierarchy levels**: At the file level, this is `collection-manifest`
-- **Names must match exactly** across images and annotation folders
-- The system automatically creates collections and manifests based on the dash-separated structure
+### How annotations are organized:
 
-### Examples from this project:
+The annotation system uses a simple flat structure where each image has a corresponding folder:
 
-| File Name | Creates | Hierarchy |
-|-----------|---------|-----------|
-| `chapter1-page01.jpg` | Collection `chapter1`, Manifest `page01` | Collection: chapter1 → Manifest: page01 |
-| `chapter2-page02.jpg` | Collection `chapter2`, Manifest `page02` | Collection: chapter2 → Manifest: page02 |
+| Image File | Annotation Folder | Status |
+|------------|------------------|---------|
+| `images/chapter1-page01.jpg` | `annotations/chapter1-page01/` | ✅ Correct - exact match |
+| `images/chapter1-page01.jpg` | `annotations/chapter1/page01/` | ❌ Wrong - nested folders not supported |
+| `images/chapter1-page01.jpg` | `annotations/chapter1-page-01/` | ❌ Wrong - must match exactly |
 
-### Matching requirements:
-- Image: `images/chapter1-page01.jpg`
-- Annotations: `annotations/chapter1-page01/` (folder name must match image base name)
-- Result: Collection `/iiif/chapter1` containing Manifest `/iiif/chapter1/page01`
+### Annotation IDs follow the folder structure:
 
-### For your own projects:
-- Use descriptive names following `collection-manifest` pattern: `album-photo`, `book-chapter`
-- For deeper hierarchies, add more levels: `collection-subcollection-manifest`
-- Keep names URL-friendly (lowercase, no spaces, use dashes)
-- Ensure image filenames match their annotation folder names exactly
+Miiify organizes annotations using a **container/annotation** pattern:
+
+- **Container**: The folder name (e.g., `chapter1-page01`)
+- **Annotation**: The JSON filename without extension (e.g., `transcription-1`)
+- **Full ID**: `http://localhost:8080/miiify/annotations/{container}/{annotation}`
+
+**Examples:**
+```
+Folder:        annotations/chapter1-page01/transcription-1.json
+Annotation ID: http://localhost:8080/miiify/annotations/chapter1-page01/transcription-1
+
+Folder:        annotations/chapter2-page02/highlight-1.json
+Annotation ID: http://localhost:8080/miiify/annotations/chapter2-page02/highlight-1
+```
+
+### Target Canvas IDs use slash-separated paths:
+
+When annotations reference canvases, dashes in the image filename become slashes:
+
+| Image Filename | Canvas ID Path |
+|----------------|----------------|
+| `chapter1-page01.jpg` | `/iiif/canvas/chapter1/page01` |
+| `chapter2-page02.jpg` | `/iiif/canvas/chapter2/page02` |
+
+**Note:** The image naming also determines the IIIF Collection/Manifest structure. See the main IIIF-in-a-Box README for details on how dashes create hierarchical collections.
+
+### Quick Reference:
+
+- ✅ **Image**: `chapter1-page01.jpg`
+- ✅ **Annotation folder**: `annotations/chapter1-page01/` (matches exactly)
+- ✅ **Annotation file**: `transcription-1.json`
+- ✅ **Annotation ID**: `/miiify/annotations/chapter1-page01/transcription-1`
+- ✅ **Canvas ID**: `/iiif/canvas/chapter1/page01` (dashes → slashes)
+
+## Annotation Example
+
+Here's a complete example showing how the naming convention ties everything together:
+
+### File Structure:
+```
+images/chapter1-page01.jpg              ← Image file
+annotations/chapter1-page01/            ← Folder name MUST match image base name
+    transcription-1.json                ← Annotation file
+```
+
+### Annotation Content (`annotations/chapter1-page01/transcription-1.json`):
+```json
+{
+  "@context": "http://www.w3.org/ns/anno.jsonld",
+  "id": "http://localhost:8080/miiify/annotations/chapter1-page01/transcription-1",
+  "type": "Annotation",
+  "motivation": "describing",
+  "body": {
+    "type": "TextualBody",
+    "value": "In principio erat verbum...",
+    "format": "text/plain",
+    "language": "la"
+  },
+  "target": {
+    "source": "http://localhost:8080/iiif/canvas/chapter1/page01",
+    "selector": {
+      "type": "FragmentSelector",
+      "value": "xywh=100,800,1000,200"
+    }
+  }
+}
+```
+
+### How the pieces connect:
+
+1. **Image file**: `chapter1-page01.jpg`
+2. **Annotation folder**: `chapter1-page01/` (must match image base name exactly)
+3. **Annotation file**: `transcription-1.json` (inside the folder)
+4. **Miiify ID**: `/miiify/annotations/chapter1-page01/transcription-1` (container/annotation pattern)
+5. **Target canvas**: `/iiif/canvas/chapter1/page01` (dashes → slashes for IIIF hierarchy)
+
+**Remember**: The annotation folder name must exactly match the image filename (without the `.jpg` extension).
 
 ## How to Use
 
@@ -73,7 +140,7 @@ cd iiif-in-a-box
 ### 2. Build and start the IIIF services
 
 ```bash
-./bootstrap.sh build --input-dir /tmp/example-iiif-project
+./bootstrap.sh build --input-dir /home/john/git/example-iiif-in-a-box-project
 ```
 
 This command will:
@@ -118,7 +185,7 @@ cd /home/john/git/iiif-in-a-box
 ./bootstrap.sh restart
 
 # Rebuild with changes
-./bootstrap.sh build --input-dir /tmp/example-iiif-project
+./bootstrap.sh build --input-dir /home/john/git/example-iiif-in-a-box-project
 ```
 
 ## Notes
