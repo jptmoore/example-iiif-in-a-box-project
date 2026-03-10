@@ -42,7 +42,6 @@ example-iiif-project/
 - **Dashes (`-`) represent hierarchy levels**: At the file level, this is `collection-manifest`
 - **Names must match exactly** across images and annotation folders
 - The system automatically creates collections and manifests based on the dash-separated structure
-- Each image file automatically becomes a canvas in its manifest
 
 ### Examples from this project:
 
