@@ -54,15 +54,15 @@ Miiify organizes annotations using a **container/annotation** pattern:
 
 - **Container**: The folder name (e.g., `chapter1-page01`)
 - **Annotation**: The JSON filename without extension (e.g., `transcription-1`)
-- **Full ID**: `http://localhost:8080/miiify/annotations/{container}/{annotation}`
+- **Full ID**: `http://localhost:8080/miiify/{container}/{annotation}`
 
 **Examples:**
 ```
 Folder:        annotations/chapter1-page01/transcription-1.json
-Annotation ID: http://localhost:8080/miiify/annotations/chapter1-page01/transcription-1
+Annotation ID: http://localhost:8080/miiify/chapter1-page01/transcription-1
 
 Folder:        annotations/chapter2-page02/highlight-1.json
-Annotation ID: http://localhost:8080/miiify/annotations/chapter2-page02/highlight-1
+Annotation ID: http://localhost:8080/miiify/chapter2-page02/highlight-1
 ```
 
 ### Target Canvas IDs use slash-separated paths:
@@ -81,7 +81,7 @@ When annotations reference canvases, dashes in the image filename become slashes
 - ✅ **Image**: `chapter1-page01.jpg`
 - ✅ **Annotation folder**: `annotations/chapter1-page01/` (matches exactly)
 - ✅ **Annotation file**: `transcription-1.json`
-- ✅ **Annotation ID**: `/miiify/annotations/chapter1-page01/transcription-1`
+- ✅ **Annotation ID**: `/miiify/chapter1-page01/transcription-1`
 - ✅ **Canvas ID**: `/iiif/canvas/chapter1/page01` (dashes → slashes)
 
 ## Annotation Example
@@ -99,7 +99,7 @@ annotations/chapter1-page01/            ← Folder name MUST match image base na
 ```json
 {
   "@context": "http://www.w3.org/ns/anno.jsonld",
-  "id": "http://localhost:8080/miiify/annotations/chapter1-page01/transcription-1",
+  "id": "http://localhost:8080/miiify/chapter1-page01/transcription-1",
   "type": "Annotation",
   "motivation": "describing",
   "body": {
@@ -123,7 +123,7 @@ annotations/chapter1-page01/            ← Folder name MUST match image base na
 1. **Image file**: `chapter1-page01.jpg`
 2. **Annotation folder**: `chapter1-page01/` (must match image base name exactly)
 3. **Annotation file**: `transcription-1.json` (inside the folder)
-4. **Miiify ID**: `/miiify/annotations/chapter1-page01/transcription-1` (container/annotation pattern)
+4. **Miiify ID**: `/miiify/chapter1-page01/transcription-1` (container/annotation pattern)
 5. **Target canvas**: `/iiif/canvas/chapter1/page01` (dashes → slashes for IIIF hierarchy)
 
 **Remember**: The annotation folder name must exactly match the image filename (without the `.jpg` extension).

@@ -1,6 +1,6 @@
 {
   "@context": "http://www.w3.org/ns/anno.jsonld",
-  "id": "http://localhost:8080/miiify/annotations/chapter2-page02/transcription-1",
+  "id": "http://localhost:8080/miiify/chapter2-page02/transcription-1",
   "type": "Annotation",
   "motivation": "describing",
   "created": "2024-03-10T11:30:00Z",
