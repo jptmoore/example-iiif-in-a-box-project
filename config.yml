@@ -1,0 +1,45 @@
+project:
+  name: medieval-manuscript
+  title: "Medieval Manuscript Collection"
+  description: "A sample medieval manuscript with transcriptions and annotations"
+  
+  metadata:
+    - label:
+        en: ["Creator"]
+      value:
+        none: ["Unknown Medieval Scribe"]
+    - label:
+        en: ["Date"]
+      value:
+        none: ["circa 1450"]
+    - label:
+        en: ["Language"]
+      value:
+        en: ["Latin", "Middle English"]
+    - label:
+        en: ["Repository"]
+      value:
+        en: ["Example Digital Library"]
+    - label:
+        en: ["Subjects"]
+      value:
+        en: ["Medieval Literature", "Illuminated Manuscripts", "Religious Texts"]
+    - label:
+        en: ["Rights"]
+      value:
+        en: ["Public Domain"]
+
+provider:
+  id: "https://example-library.org"
+  type: "Agent"
+  label:
+    en:
+      - "Example Digital Library"
+      - "123 Library Lane"
+      - "Academic City, AC 12345"
+      - "https://example-library.org"
+  homepage:
+    - id: "https://example-library.org"
+      type: "Text"
+      label:
+        en: ["Visit our digital collections"]

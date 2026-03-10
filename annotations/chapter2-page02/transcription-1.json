@@ -1,0 +1,26 @@
+{
+  "@context": "http://www.w3.org/ns/anno.jsonld",
+  "id": "http://localhost:8080/miiify/annotation/chapter2-page02-transcription-1",
+  "type": "Annotation",
+  "motivation": "describing",
+  "created": "2024-03-10T11:30:00Z",
+  "creator": {
+    "id": "https://example.org/users/scholar2",
+    "type": "Person",
+    "name": "Prof. Chaucer Expert"
+  },
+  "body": {
+    "type": "TextualBody",
+    "value": "Thanne longen folk to goon on pilgrimages, / And palmeres for to seken straunge strondes, / To ferne halwes, kowthe in sondry londes; / And specially from every shires ende / Of Engelond to Caunterbury they wende, / The hooly blisful martir for to seke, / That hem hath holpen whan that they were seeke. (Then people long to go on pilgrimages / And palmers to seek strange shores / To distant shrines, known in various lands; / And especially from every shire's end / Of England to Canterbury they go / The holy blissful martyr to seek / Who has helped them when they were sick.)",
+    "format": "text/plain",
+    "language": "enm"
+  },
+  "target": {
+    "source": "http://localhost:8080/iiif/canvas/chapter2/page02",
+    "selector": {
+      "type": "FragmentSelector",
+      "conformsTo": "http://www.w3.org/TR/media-frags/",
+      "value": "xywh=100,300,1000,500"
+    }
+  }
+}

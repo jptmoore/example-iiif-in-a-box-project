@@ -1,0 +1,26 @@
+{
+  "@context": "http://www.w3.org/ns/anno.jsonld",
+  "id": "http://localhost:8080/miiify/annotation/chapter1-page01-transcription-1",
+  "type": "Annotation",
+  "motivation": "describing",
+  "created": "2024-03-10T10:00:00Z",
+  "creator": {
+    "id": "https://example.org/users/scholar1",
+    "type": "Person",
+    "name": "Dr. Medieval Scholar"
+  },
+  "body": {
+    "type": "TextualBody",
+    "value": "In principio erat verbum, et verbum erat apud Deum, et Deus erat verbum. (In the beginning was the Word, and the Word was with God, and the Word was God.)",
+    "format": "text/plain",
+    "language": "la"
+  },
+  "target": {
+    "source": "http://localhost:8080/iiif/canvas/chapter1/page01",
+    "selector": {
+      "type": "FragmentSelector",
+      "conformsTo": "http://www.w3.org/TR/media-frags/",
+      "value": "xywh=100,800,1000,200"
+    }
+  }
+}

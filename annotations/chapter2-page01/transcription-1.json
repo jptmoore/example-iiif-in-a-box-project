@@ -1,0 +1,26 @@
+{
+  "@context": "http://www.w3.org/ns/anno.jsonld",
+  "id": "http://localhost:8080/miiify/annotation/chapter2-page01-transcription-1",
+  "type": "Annotation",
+  "motivation": "describing",
+  "created": "2024-03-10T11:00:00Z",
+  "creator": {
+    "id": "https://example.org/users/scholar2",
+    "type": "Person",
+    "name": "Prof. Chaucer Expert"
+  },
+  "body": {
+    "type": "TextualBody",
+    "value": "Whan that Aprill with his shoures soote / The droghte of March hath perced to the roote, / And bathed every veyne in swich licour / Of which vertu engendred is the flour... (When April with his sweet showers / Has pierced the drought of March to the root, / And bathed every vein in such liquid / From which strength the flower is engendered...)",
+    "format": "text/plain",
+    "language": "enm"
+  },
+  "target": {
+    "source": "http://localhost:8080/iiif/canvas/chapter2/page01",
+    "selector": {
+      "type": "FragmentSelector",
+      "conformsTo": "http://www.w3.org/TR/media-frags/",
+      "value": "xywh=100,600,1000,300"
+    }
+  }
+}

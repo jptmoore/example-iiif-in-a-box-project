@@ -1,0 +1,26 @@
+{
+  "@context": "http://www.w3.org/ns/anno.jsonld",
+  "id": "http://localhost:8080/miiify/annotation/chapter1-page02-transcription-1",
+  "type": "Annotation",
+  "motivation": "describing",
+  "created": "2024-03-10T10:30:00Z",
+  "creator": {
+    "id": "https://example.org/users/scholar1",
+    "type": "Person",
+    "name": "Dr. Medieval Scholar"
+  },
+  "body": {
+    "type": "TextualBody",
+    "value": "Hoc est corpus meum quod pro vobis tradetur: hoc facite in meam commemorationem. (This is my body which is given for you: do this in remembrance of me.)",
+    "format": "text/plain",
+    "language": "la"
+  },
+  "target": {
+    "source": "http://localhost:8080/iiif/canvas/chapter1/page02",
+    "selector": {
+      "type": "FragmentSelector",
+      "conformsTo": "http://www.w3.org/TR/media-frags/",
+      "value": "xywh=100,400,1000,400"
+    }
+  }
+}
