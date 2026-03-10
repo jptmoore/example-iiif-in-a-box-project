@@ -39,7 +39,7 @@ example-iiif-project/
 **IMPORTANT:** File and folder names use a hierarchical naming convention with dashes (`-`) to define the IIIF collection and manifest structure.
 
 ### How it works:
-- **Dashes (`-`) represent hierarchy levels**: `collection-manifest` or `collection-subcollection-item`
+- **Dashes (`-`) represent hierarchy levels**: `manifest-canvas` for simple projects, or `collection-manifest-canvas` for nested collections
 - **Names must match exactly** across images and annotation folders
 - The system automatically creates collections and manifests based on the dash-separated structure
 
@@ -47,8 +47,8 @@ example-iiif-project/
 
 | File Name | Creates | Hierarchy |
 |-----------|---------|-----------|
-| `chapter1-page01.jpg` | Manifest `chapter1`, Canvas `page01` | Collection: chapter1 → Item: page01 |
-| `chapter2-page02.jpg` | Manifest `chapter2`, Canvas `page02` | Collection: chapter2 → Item: page02 |
+| `chapter1-page01.jpg` | Manifest `chapter1`, Canvas `page01` | Manifest: chapter1 → Canvas: page01 |
+| `chapter2-page02.jpg` | Manifest `chapter2`, Canvas `page02` | Manifest: chapter2 → Canvas: page02 |
 
 ### Matching requirements:
 - Image: `images/chapter1-page01.jpg`
@@ -56,7 +56,7 @@ example-iiif-project/
 - Result: `/iiif/canvas/chapter1/page01`
 
 ### For your own projects:
-- Use descriptive names: `album-photo`, `book-chapter-page`, `collection-item`
+- Use descriptive names: `album-photo`, `book-chapter-page`, or deeper hierarchies like `collection-book-page`
 - Keep names URL-friendly (lowercase, no spaces, use dashes)
 - Ensure image filenames match their annotation folder names exactly
 
