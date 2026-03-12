@@ -1,6 +1,6 @@
 {
   "@context": "http://www.w3.org/ns/anno.jsonld",
-  "id": "http://localhost:8080/miiify/chapter2-page02/highlight-1",
+  "id": "http://localhost:8080/miiify/book-page04/highlight-1",
   "type": "Annotation",
   "motivation": "highlighting",
   "created": "2024-03-10T11:45:00Z",
@@ -16,7 +16,7 @@
     "language": "en"
   },
   "target": {
-    "source": "http://localhost:8080/iiif/canvas/chapter2/page02",
+    "source": "http://localhost:8080/canvas/book-page04",
     "selector": {
       "type": "FragmentSelector",
       "conformsTo": "http://www.w3.org/TR/media-frags/",
