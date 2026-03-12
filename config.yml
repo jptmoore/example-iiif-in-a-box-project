@@ -1,5 +1,5 @@
 project:
-  name: medieval-manuscript
+  name: book
   title: "Medieval Manuscript Collection"
   description: "A sample medieval manuscript with transcriptions and annotations"
   
