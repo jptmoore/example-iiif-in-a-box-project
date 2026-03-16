@@ -16,7 +16,7 @@
     "language": "enm"
   },
   "target": {
-    "source": "http://localhost:8080/canvas/book-page04",
+    "source": "http://canvas/book-page04",
     "selector": {
       "type": "FragmentSelector",
       "conformsTo": "http://www.w3.org/TR/media-frags/",

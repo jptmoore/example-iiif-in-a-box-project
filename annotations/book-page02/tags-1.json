@@ -26,5 +26,5 @@
       "purpose": "tagging"
     }
   ],
-  "target": "http://localhost:8080/canvas/book-page02"
+  "target": "http://canvas/book-page02"
 }

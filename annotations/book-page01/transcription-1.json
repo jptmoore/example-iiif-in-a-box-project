@@ -16,7 +16,7 @@
     "language": "la"
   },
   "target": {
-    "source": "http://localhost:8080/canvas/book-page01",
+    "source": "http://canvas/book-page01",
     "selector": {
       "type": "FragmentSelector",
       "conformsTo": "http://www.w3.org/TR/media-frags/",
