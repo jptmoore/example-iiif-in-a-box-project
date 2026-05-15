@@ -1,18 +1,24 @@
 {
   "@context": "http://www.w3.org/ns/anno.jsonld",
   "type": "Annotation",
-  "motivation": "describing",
-  "created": "2024-03-10T10:30:00Z",
+  "motivation": "transcribing",
+  "created": "2024-03-10T10:35:00Z",
   "creator": {
     "id": "https://example.org/users/scholar1",
     "type": "Person",
     "name": "Dr. Medieval Scholar"
   },
+  "generator": {
+    "id": "https://chat.openai.com",
+    "type": "Software",
+    "name": "ChatGPT-4o",
+    "homepage": "https://chat.openai.com"
+  },
   "body": {
     "type": "TextualBody",
-    "value": "One thing I have asked of the Lord, this will I seek after; that I may dwell in the house of the Lord all the days of my life.",
+    "value": "Unam petii a Domino, hanc requiram, ut inhabitem in domo Domini omnibus diebus vitae meae, ut videam voluptatem Domini et visitem templum eius.",
     "format": "text/plain",
-    "language": "en"
+    "language": "la"
   },
   "target": {
     "source": "http://canvas/book-page02",

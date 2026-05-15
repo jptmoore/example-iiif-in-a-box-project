@@ -6,7 +6,7 @@ A sample input project for [IIIF-in-a-Box](https://github.com/jptmoore/iiif-in-a
 
 - `config.yml` — project metadata (title, provider, etc.)
 - `images/` — 4 sample manuscript pages (`book-page01.jpg` … `book-page04.jpg`)
-- `annotations/book-pageNN/` — W3C Web Annotations (transcriptions, comments, tags, highlights) keyed to each image
+- `annotations/book-pageNN/` — W3C Web Annotations
 
 ## Usage
 

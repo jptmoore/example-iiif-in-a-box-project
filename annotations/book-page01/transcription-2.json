@@ -1,26 +1,31 @@
 {
   "@context": "http://www.w3.org/ns/anno.jsonld",
-  "id": "http://localhost:8080/miiify/book-page01/comment-1",
   "type": "Annotation",
-  "motivation": "commenting",
-  "created": "2024-03-10T10:15:00Z",
+  "motivation": "transcribing",
+  "created": "2024-03-10T10:05:00Z",
   "creator": {
     "id": "https://example.org/users/scholar1",
     "type": "Person",
     "name": "Dr. Medieval Scholar"
   },
+  "generator": {
+    "id": "https://chat.openai.com",
+    "type": "Software",
+    "name": "ChatGPT-4o",
+    "homepage": "https://chat.openai.com"
+  },
   "body": {
     "type": "TextualBody",
-    "value": "This is a reference to the Gospel of John 1:1. The scribe uses an elegant hand typical of 15th century monastic scriptoria. Note the decorative initial 'I'.",
+    "value": "Dominus illuminatio mea et salus mea, quem timebo? Dominus protector vitae meae, a quo trepidabo?",
     "format": "text/plain",
-    "language": "en"
+    "language": "la"
   },
   "target": {
     "source": "http://canvas/book-page01",
     "selector": {
       "type": "FragmentSelector",
       "conformsTo": "http://www.w3.org/TR/media-frags/",
-      "value": "xywh=100,500,1000,100"
+      "value": "xywh=100,800,1000,200"
     }
   }
 }
