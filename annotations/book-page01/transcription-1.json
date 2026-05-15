@@ -1,6 +1,5 @@
 {
   "@context": "http://www.w3.org/ns/anno.jsonld",
-  "id": "http://localhost:8080/miiify/book-page01/transcription-1",
   "type": "Annotation",
   "motivation": "describing",
   "created": "2024-03-10T10:00:00Z",
@@ -11,9 +10,9 @@
   },
   "body": {
     "type": "TextualBody",
-    "value": "In principio erat verbum, et verbum erat apud Deum, et Deus erat verbum. (In the beginning was the Word, and the Word was with God, and the Word was God.)",
+    "value": "The Lord is my light and my salvation; whom shall I fear? The Lord is the protector of my life; of whom shall I be afraid?",
     "format": "text/plain",
-    "language": "la"
+    "language": "en"
   },
   "target": {
     "source": "http://canvas/book-page01",

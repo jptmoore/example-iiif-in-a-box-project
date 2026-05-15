@@ -1,18 +1,24 @@
 {
   "@context": "http://www.w3.org/ns/anno.jsonld",
   "type": "Annotation",
-  "motivation": "describing",
-  "created": "2024-03-10T11:00:00Z",
+  "motivation": "transcribing",
+  "created": "2024-03-10T11:05:00Z",
   "creator": {
     "id": "https://example.org/users/scholar1",
     "type": "Person",
     "name": "Dr. Medieval Scholar"
   },
+  "generator": {
+    "id": "https://chat.openai.com",
+    "type": "Software",
+    "name": "ChatGPT-4o",
+    "homepage": "https://chat.openai.com"
+  },
   "body": {
     "type": "TextualBody",
-    "value": "I believe that I shall see the good things of the Lord in the land of the living. Wait for the Lord, act manfully, and let thy heart take courage, and wait thou for the Lord.",
+    "value": "Credo quod videbo bona Domini in terra viventium. Expecta Dominum, viriliter age, et confortetur cor tuum, et sustine Dominum.",
     "format": "text/plain",
-    "language": "en"
+    "language": "la"
   },
   "target": {
     "source": "http://canvas/book-page03",
